@@ -10,6 +10,9 @@ function Header({ change }) {
 
   const [indicatorPercentage, setIndicatorPercentage] = useState(0)
   const [navigate, setNavigate] = useState('')
+  const [toggle, setToggle] = useState(true)
+
+  const [collapse, setCollapse] = useState(false)
   function handleScrollPercentage() {
 
     const HowMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
@@ -42,65 +45,76 @@ function Header({ change }) {
             </div>
           </div>
         </div>
-        <div className='indicator_progress_bar'>
+        <div className='indicator_progress_bar W-100'>
           <div className='indicator_progress' style={{ width: `${indicatorPercentage}%` }}></div>
         </div>
       </div>
 
       <nav className='Second_header_container'>
-
-        <div className='School_image_container'>
+        <div className='School_image_container ps-4'>
           <img src={SchoolImage} alt='School-image and name' />
         </div>
-        <div className='links_containers'>
-          <div className='link_container'>
-            <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'About' ? null : "About"); e.preventDefault() }}>To know more</a>
-            <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setNavigate(navigate === 'About' ? null : "About") ? (e) => e.preventDefault() : null} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === "About" ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
-            {navigate === 'About' && <ul id='About' className={navigate ? "dispaly_flex" : "display_none"}>
-              <li><a href='/history' target='_self'>About Us</a></li>
-              <li><a href='/Anthem'>College Anthem</a></li>
-            </ul>}
-          </div>
-          <div className='link_container'>
-            <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'administration' ? null : "administration"); e.preventDefault() }}>Administration</a>
-            <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setNavigate(navigate === 'administration' ? null : "administration")} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === "administration" ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
-            {navigate === 'administration' && <ul id='administration' className={navigate === 'administration' ? "dispaly_flex" : "display_none"}>
-              <li><a href=''>Principal office</a></li>
-              <li><a href=''>Teachers Office</a></li>
-              <li><a href=''>Staff's</a></li>
+        <div className='d-fle'>
+          <svg className='menu_toggler' xmlns="http://www.w3.org/2000/svg" width="24" height="24" onClick={() => setToggle(!toggle)} fill="currentColor" viewBox="0 0 24 24">
+            {/* <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free--> */}
+            <path d="M4 11h16v2H4zm0-5h16v2H4zm0 10h16v2H4z"></path>
+          </svg>
+          {toggle &&
+            <div className='links_containers'>
 
-            </ul>}
-          </div>
+              <div className='d-grid'>
+                <div className='link_container'>
+                  <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'About' ? null : "About"); e.preventDefault(); setCollapse(!collapse) }}>To know more</a>
+                  <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setNavigate(navigate === 'About' ? null : "About") ? (e) => e.preventDefault() : null} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === "About" ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
 
-          <div className='link_container'>
-            <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'Students_portal' ? null : 'Students_portal'); e.preventDefault() }}>Students</a>
-            <svg xmlns="http://www.w3" width="24" height="24" onClick={() => setNavigate(navigate === 'Students_portal' ? null : 'Students_portal')} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === 'Students_portal' ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
-            {navigate === 'Students_portal' && <ul className={navigate === 'Students_portal' && "dispaly_flex"}>
+                </div>
+                {navigate === 'About' && <ul id='About' className={navigate ? "dispaly_flex" : "display_none"}>
+                  <li><a href='/history' target='_self'>About Us</a></li>
+                  <li><a href='/Anthem'>College Anthem</a></li>
+                </ul>}
+              </div>
+              <div className='d-grid'>
+                <div className='link_container'>
+                  <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'administration' ? null : "administration"); e.preventDefault() }}>Administration</a>
+                  <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setNavigate(navigate === 'administration' ? null : "administration")} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === "administration" ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
 
-               <li><Link to='/Login'>Students portal</Link></li>
-              <li><a href='/'>Check Result</a></li>
-              <li><a href='/'>Admission List</a></li>
-             
+                </div>
+                {navigate === 'administration' && <ul id='administration' className={navigate === 'administration' ? "dispaly_flex" : "display_none"}>
+                  <li><a href='/'>Principal office</a></li>
+                  <li><a href='/'>Teachers Office</a></li>
+                  <li><a href='/'>Staff's</a></li>
 
-              <li><Link to='/Login'>Students portal</Link></li>
-              <li><a href=''>Check Result</a></li>
-              <li><a href=''>Admission List</a></li>
+                </ul>}
+              </div>
+
+              <div className='d-grid'>
+                <div className='link_container'>
+                  <a href='/' target='_self' className='angle-tag' onClick={(e) => { setNavigate(navigate === 'Students_portal' ? null : 'Students_portal'); e.preventDefault() }}>Students</a>
+                  <svg xmlns="http://www.w3" width="24" height="24" onClick={() => setNavigate(navigate === 'Students_portal' ? null : 'Students_portal')} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={navigate === 'Students_portal' ? "rotate" : "bb"}><path d="m6 9 6 6 6-6"></path></svg>
+
+                </div>
+                {navigate === 'Students_portal' && <ul className={navigate === 'Students_portal' && "dispaly_flex"}>
+
+                  <li><Link to='/Login'>Students portal</Link></li>
+                  <li><a href='/'>Check Result</a></li>
+                  <li><a href='/'>Admission List</a></li>
 
 
-            </ul>}
-          </div>
+                </ul>}
+              </div>
 
-          <div className='link_container'>
-            <a href='/#News_and_Event' target='_self' className='angle-tag'>News & Events</a>
-          </div>
-          <div className='link_container'>
-            <a href='#contact' target='_self' className='angle-tag'>Contact</a>
-          </div>
+              <div className='link_container'>
+                <a href='/government-secondary-school-project#News_and_Event' target='_self' onClick={() => setToggle(false)} className='angle-tag'>News & Events</a>
+              </div>
+              <div className='link_container'>
+                <a href='#contact' target='_self' className='angle-tag' onClick={() => setToggle(false)}>Contact</a>
+              </div>
+            </div>}
+
         </div>
-
       </nav>
 
-    </header>
+    </header >
 
   )
 }

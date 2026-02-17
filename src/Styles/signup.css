@@ -1,0 +1,33 @@
+.form {
+    background-color: hwb(0 100% 0% / 0.808);
+    box-shadow: 2px 3px 16px black;
+}
+
+
+
+.w-40 {
+    width: 39%;
+}
+
+.box-shadw {
+    text-shadow: none;
+    color: white;
+}
+
+.w-41 {
+    width: 9%;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1268px) {
+    .bg-info{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .form {
+        width: 90%;
+        height: 500px;
+        margin: auto;
+    }
+}

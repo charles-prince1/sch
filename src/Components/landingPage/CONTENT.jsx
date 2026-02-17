@@ -9,6 +9,7 @@ import Icon2 from "../../images/3.png";
 import video1 from "../../images/VID-20251002-WA0001.mp4";
 import video2 from "../../images/VID-20251005-WA0078.mp4";
 import pdf from "../../images/StarAwrd.pdf";
+import { Link, Navigate } from "react-router-dom";
 function Content() {
   const [infor, setInfor] = useState("");
   const [imageIndex, setImageIndex] = useState(0);
@@ -67,7 +68,7 @@ function Content() {
         <div className="information_container">
           <button onClick={() => setInfor("Guidinces")}>How to Apply</button>
           <button onClick={() => setInfor("Policy")}>Policy</button>
-          <button onClick={() => setInfor("form")}>Application Form</button>
+          <button ><Link to='/Account_Setup'>Application Form</Link></button>
         </div>
         <div className={infor === "" ? " d-none" : "displayed d-flex  vh-100 mt-1 "}>
           {infor === 'Guidinces' && <div className=" w-100 ">
@@ -88,7 +89,7 @@ function Content() {
               <p className="text-info">How are you doing</p>
             </div>
           </div>}
-          {infor === 'form' && <div className=" w-100 ">
+          {/*   {infor === 'form' && <div className=" w-100 ">
 
             <div className=" px-5 pt-5 bg-black mt-2 m-auto auto heig ">
               <button className="cancelBtn" onClick={() => setInfor('')}>X</button>
@@ -96,7 +97,7 @@ function Content() {
               <p className="text-info">Hello you</p>
               <p className="text-info">How are you doing</p>
             </div>
-          </div>}
+          </div>} */}
         </div>
         <div>
           <aside id="News_and_Event" className="News_and_Event">

@@ -5,11 +5,13 @@ import './App.css'
 import Footer from './Components/landingPage/footer';
 import History from './Components/landingPage/History';
 import Anthem from './Components/landingPage/Anthem';
-import Login from './Components/Students/Login'
+import Login from './Components/AccountsPages/Login'
 import { useState } from 'react';
 import Home from './Components/landingPage/HomePage';
 import StudentsData from './Components/Students/studentsTest';
 import Test from './Components/test';
+import Example from './Components/landingPage/exmple';
+import Signup from './Components/AccountsPages/SiginUp';
 function App() {
 
 
@@ -17,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Route for Home page */}
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/government-secondary-school-project' element={<Home />} />
         {/* Route for history page */}
         <Route exact path='/history' element={<>
           <Header />
@@ -32,10 +34,13 @@ function App() {
             <Footer />
           </>
         } />
-        {/* Route for Login page */}
+        {/* Route for students Login  page */}
         <Route exact path='/Login' element={<Login />} />
         {/* Route for student Dashboard */}
         <Route exact path='/Dashboard' element={<StudentsData />} />
+        {/*Route for students signup*/}
+        <Route exact path='/Account_Setup' element={<Signup />} />
+        <Route exact path='/example' element={<Example />} />
         <Route exact path='/Test' element={<Test />} />
       </Routes>
     </BrowserRouter>
