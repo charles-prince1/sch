@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/sch/static/css/main.7ebd6849.css",
+    "main.js": "/sch/static/js/main.9a97c9d8.js",
+    "static/js/488.03501e3e.chunk.js": "/sch/static/js/488.03501e3e.chunk.js",
+    "static/media/VID-20251005-WA0078.mp4": "/sch/static/media/VID-20251005-WA0078.db41d7977ddb88074428.mp4",
+    "static/media/VID-20251002-WA0001.mp4": "/sch/static/media/VID-20251002-WA0001.9e519955e6298422f0cc.mp4",
+    "static/media/Screenshot (137).png": "/sch/static/media/Screenshot (137).707c19a47347c2ff0bd7.png",
+    "static/media/Screenshot (132).png": "/sch/static/media/Screenshot (132).f7d46f650839701e739f.png",
+    "static/media/Screenshot (146).png": "/sch/static/media/Screenshot (146).37896189d13d00f2d49e.png",
+    "static/media/Screenshot (145).png": "/sch/static/media/Screenshot (145).0d51e478dd64b3b394c8.png",
+    "static/media/Screenshot (147).png": "/sch/static/media/Screenshot (147).e6d939b2d1a80069693d.png",
+    "static/media/Screenshot (131).png": "/sch/static/media/Screenshot (131).85e7b4dbcb917bf147e6.png",
+    "static/media/Name of school.jpg": "/sch/static/media/Name of school.6139dd39c066d16bfba9.jpg",
+    "static/media/Screenshot (135).png": "/sch/static/media/Screenshot (135).6af6dc38bf9bcbc4eeb8.png",
+    "static/media/Screenshot (130).png": "/sch/static/media/Screenshot (130).e94b14932c9507d747fd.png",
+    "static/media/Screenshot (134).png": "/sch/static/media/Screenshot (134).871766adc56736667076.png",
+    "static/media/School.png": "/sch/static/media/School.8d7da733931e2af1d676.png",
+    "static/media/IMG-20250911-WA0201.jpg": "/sch/static/media/IMG-20250911-WA0201.cfbba78f756989a4d1d7.jpg",
+    "static/media/StarAwrd.pdf": "/sch/static/media/StarAwrd.99835d63b9585c87b208.pdf",
+    "index.html": "/sch/index.html",
+    "main.7ebd6849.css.map": "/sch/static/css/main.7ebd6849.css.map",
+    "main.9a97c9d8.js.map": "/sch/static/js/main.9a97c9d8.js.map",
+    "488.03501e3e.chunk.js.map": "/sch/static/js/488.03501e3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ebd6849.css",
+    "static/js/main.9a97c9d8.js"
+  ]
+}
